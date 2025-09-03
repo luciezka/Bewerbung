@@ -1,0 +1,159 @@
+$primary: #3399FF;
+$secondary:#D6EBFF;
+
+@import "bootstrap/bootstrap";
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family:  "Arial";
+  font-size: 12pt;
+  -webkit-print-color-adjust:exact !important;
+  print-color-adjust:exact !important;
+}
+
+ul{
+  margin-bottom: 0;
+}
+body {
+  background: rgb(204,204,204);
+}
+
+header{
+  margin-top: 0.125cm;
+  text-align: center;
+  color: #6c757d;
+@extend .fs-6;
+}
+
+p{
+  margin-bottom: 0px;
+}
+
+h3{
+  @extend .fs-5;
+  @extend .text-primary;
+}
+
+.grid-body-container-frontPage h3{
+  margin-left: 0;
+}
+
+li{
+  margin-left: 0.5cm;
+  margin-right: 0.5cm;
+}
+
+body > div.page.page1 > page > div.grid-body-container-frontPage > div.sidebar.bg-secondary.container > div:nth-child(1){
+  margin-top: 0.25cm;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-rows: 1cm auto 1cm;
+}
+
+
+.grid-body-container-frontPage{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows:  30% auto;
+}
+
+
+
+.grid-footer-container{
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.bar-top{
+  border-top-right-radius: 5% ;
+}
+
+.main{
+  margin-top: 0.5cm;
+  margin-left: 0.5cm;
+}
+
+
+.border-top-seperator-primary{
+  padding-top: 0.25cm;
+  border-width:0px ;
+  border-top-width: 1px;
+  border-color: $primary;
+  border-style: outset;
+}
+
+.row .row{
+  padding-right: 0;
+}
+
+
+.fs-1{
+  font-size: 36pt !important;
+}
+
+.fs-2{
+  font-size: 28pt !important;
+
+}
+.fs-5{
+  font-size: 12pt !important;
+}
+
+.fs-6{
+  font-size: 9pt !important;
+}
+
+.adressStreet p{
+  margin-bottom: 0 !important;
+}
+
+.anschreiben-body{
+  margin-left: 0.5cm;
+  margin-right: 0.5cm;
+}
+
+
+footer{
+  margin-top: auto;
+}
+
+
+page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+
+page[size="A4"] {
+  width: 210mm;
+  height: 297mm;
+}
+
+@media print{
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  page{
+    background: white;
+    display: block;
+    margin: 0;
+    box-shadow: none;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 100%;
+  }
+}
