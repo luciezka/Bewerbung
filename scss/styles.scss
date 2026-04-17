@@ -1,4 +1,4 @@
-$primary: #3399FF;
+$primary: #0070e4;
 $secondary:#D6EBFF;
 
 @import "bootstrap/bootstrap";
@@ -28,6 +28,7 @@ header{
 
 p{
   margin-bottom: 0px;
+  @extend .fs-5;
 }
 
 h3{
@@ -35,36 +36,36 @@ h3{
   @extend .text-primary;
 }
 
-.grid-body-container-frontPage h3{
-  margin-left: 0;
-}
-
 li{
   margin-left: 0.5cm;
   margin-right: 0.5cm;
 }
 
-body > div.page.page1 > page > div.grid-body-container-frontPage > div.sidebar.bg-secondary.container > div:nth-child(1){
-  margin-top: 0.25cm;
-}
 
-.grid-container{
+.grid-container {
   display: grid;
   grid-template-rows: 1cm auto 1cm;
 }
 
+.bar-top{
+  background: #0dcaf0 ;
+
+}
 
 .grid-body-container-frontPage{
   display: grid;
-  grid-template-columns: 60% 40%;
-  grid-template-rows:  30% auto;
+  grid-template-columns: 65% auto;
+  grid-template-rows:  26% auto;
 }
 
-
+.stage-of-life-container{
+  display: grid;
+  grid-template-columns: 3rem auto;
+}
 
 .grid-footer-container{
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 65% auto;
 }
 
 .bar-top{
@@ -77,12 +78,24 @@ body > div.page.page1 > page > div.grid-body-container-frontPage > div.sidebar.b
 }
 
 
+
 .border-top-seperator-primary{
   padding-top: 0.25cm;
+  padding-bottom: 0.25cm;
   border-width:0px ;
   border-top-width: 1px;
   border-color: $primary;
   border-style: outset;
+}
+
+.border-sides-primary{
+  padding-top: 0.25cm;
+  margin-right: 12px;
+  border-width: 0px ;
+  border-top: 1px;
+  border-right: 1px;
+  border-color: $primary;
+  border-style: solid;
 }
 
 .row .row{
